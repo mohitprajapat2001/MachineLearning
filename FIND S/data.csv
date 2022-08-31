@@ -1,0 +1,7 @@
+example,sky,airtemp,humidity,wind,water,forecast,target
+1,sunny,warm,normal,strong,warm,same,True
+2,sunny,warm,high,strong,warm,same,True
+3,rainy,cold,high,strong,warm,change,False
+4,sunny,warm,high,strong,cool,change,True
+5,rainy,warm,high,strong,cool,change,True
+6,cloudy,warm,high,strong,cool,same,False
