@@ -1,6 +1,6 @@
 id,fever,cough,breathing issues,infected
 1,no,no,no,no
-2,yes,yes,yes,yes
+2,no,yes,yes,yes
 3,yes,yes,no,no
 4,yes,no,yes,yes
 5,yes,yes,yes,yes
