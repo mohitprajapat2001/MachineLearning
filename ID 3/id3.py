@@ -2,7 +2,7 @@ import pandas as pd
 import math
 
 df = pd.read_csv('data.csv')
-print("Input Data CSV is:",df)
+print("Input Data CSV is:\n",df)
 
 t = df.keys()[-1]
 print('Target Attribute is: ', t)
@@ -19,12 +19,11 @@ def entropy_of_list(ls,value):
     cnt = Counter(x for x in ls)
     print('Target attribute class =',dict(cnt))
     total_instances = len(ls)
-    print("Total no of instances associated with {0} is: {1}".format(value,total_instances ))
+    print("Total no of instances associated with {0} and {1} is:".format(value,total_instances ))
     probs = [x / total_instances for x in cnt.values()]
     print("Probability of Class {0} is: {1:.4f}".format(min(cnt),min(probs)))
     print("Probability of Class {0} is: {1:.4f}".format(max(cnt),max(probs)))
     return entropy(probs)
-
 
 def information_gain(df, split_attribute, target_attribute, battr):
     print("Information Gain Calculation of ", split_attribute)
@@ -89,6 +88,5 @@ def classify(instance, tree,default=None):
             return result
     else:
         return default
-df_new=pd.read_csv('data.csv')
-df_new['predicted'] = df_new.apply(classify, axis=1, args=(tree,'?'))
-print(df_new)
+df['predicted'] = df.apply(classify, axis=1, args=(tree,'?'))
+print(df)
